@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using GraphQl.BlazorWasm;
-using GraphQl.BlazorWasm.DataPoints;
+using LearningBlazor;
+using LearningBlazor.DataPoints;
 
 using MudBlazor.Services;
 

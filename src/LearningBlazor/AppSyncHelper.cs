@@ -1,4 +1,4 @@
-﻿namespace GraphQl.BlazorWasm;
+﻿namespace LearningBlazor;
 
 using System.Runtime.CompilerServices;
 

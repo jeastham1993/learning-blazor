@@ -1,11 +1,11 @@
-﻿namespace GraphQl.BlazorWasm.DataPoints;
+﻿namespace LearningBlazor.DataPoints;
 
 using System.Reactive.Linq;
 using System.Text.Json;
 
 using GraphQL;
 
-using GraphQl.BlazorWasm.Client.DataPoint;
+using LearningBlazor.Client.DataPoint;
 
 using GraphQL.Client.Http;
 

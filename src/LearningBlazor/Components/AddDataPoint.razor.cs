@@ -1,6 +1,6 @@
-﻿namespace GraphQl.BlazorWasm.Components;
+﻿namespace LearningBlazor.Components;
 
-using GraphQl.BlazorWasm.DataPoints;
+using LearningBlazor.DataPoints;
 
 using Microsoft.AspNetCore.Components;
 

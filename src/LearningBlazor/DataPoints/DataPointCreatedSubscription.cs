@@ -1,6 +1,6 @@
-﻿namespace GraphQl.BlazorWasm;
+﻿namespace LearningBlazor;
 
-using GraphQl.BlazorWasm.DataPoints;
+using LearningBlazor.DataPoints;
 
 public class OnDataPointAddedSubscriptionResult {
     public DataPointItem OnCreateDataPoint { get;  set; }

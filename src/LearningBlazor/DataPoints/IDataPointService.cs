@@ -1,8 +1,8 @@
-﻿namespace GraphQl.BlazorWasm.DataPoints;
+﻿namespace LearningBlazor.DataPoints;
 
 using GraphQL;
 
-using GraphQl.BlazorWasm.Client.DataPoint;
+using LearningBlazor.Client.DataPoint;
 
 using StrawberryShake;
 
