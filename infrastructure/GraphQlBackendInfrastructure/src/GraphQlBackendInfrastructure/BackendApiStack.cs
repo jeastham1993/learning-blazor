@@ -25,8 +25,7 @@ public class BackendApiStack : Construct
             "TestLambdaFunction",
             new FunctionAttributes()
             {
-                FunctionArn =
-                    "arn:aws:lambda:us-east-1:521936459218:function:learning-blazor-lambda-GetProductsFunction-ZTJAHjRre60S",
+                FunctionArn = "",
                 SameEnvironment = true
             });
         
