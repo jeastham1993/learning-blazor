@@ -4,7 +4,7 @@
   "extensions": {
     "strawberryShake": {
       "name": "DataPointClient",
-      "namespace": "LearningBlazor.Client.DataPoint",
+      "namespace": "LearningBlazor.DataPoints",
       "url": "https://h7ihye3yk5abhhkz2swaok65s4.appsync-api.us-east-1.amazonaws.com/graphql",
       "dependencyInjection": true,
       "strictSchemaValidation": true,

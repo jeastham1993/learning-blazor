@@ -1,4 +1,4 @@
-﻿namespace LearningBlazor.Components;
+﻿namespace LearningBlazor.DataPoints.Components;
 
 using LearningBlazor.DataPoints;
 

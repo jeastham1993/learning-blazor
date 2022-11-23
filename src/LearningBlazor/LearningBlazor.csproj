@@ -26,12 +26,45 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Demo\.graphqlrc.json" />
+    <_ContentIncludedByDefault Remove="Components\AddDataPoint.razor" />
+    <_ContentIncludedByDefault Remove="Components\DataPointList.razor" />
+    <_ContentIncludedByDefault Remove="Components\HeaderComponent.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <Watch Remove="Demo\GetSessions.graphql" />
     <Watch Remove="Demo\schema.extensions.graphql" />
     <Watch Remove="Demo\schema.graphql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Client" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <GraphQL Update="DataPoints\DataPointClient\CreateDataPoint.graphql">
+      <Generator>MSBuild:Compile</Generator>
+    </GraphQL>
+    <GraphQL Update="DataPoints\DataPointClient\ListDataPoints.graphql">
+      <Generator>MSBuild:Compile</Generator>
+    </GraphQL>
+    <GraphQL Update="DataPoints\DataPointClient\schema.extensions.graphql">
+      <Generator>MSBuild:Compile</Generator>
+    </GraphQL>
+    <GraphQL Update="DataPoints\DataPointClient\schema.graphql">
+      <Generator>MSBuild:Compile</Generator>
+    </GraphQL>
+  </ItemGroup>
+
+  <ItemGroup>
+    <GraphQLConfig Update="DataPoints\DataPointClient\.graphqlrc.json">
+      <Generator>MSBuild:Compile</Generator>
+    </GraphQLConfig>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="DataPoints\Components\AddDataPoint.razor" />
+    <AdditionalFiles Include="DataPoints\Components\DataPointList.razor" />
   </ItemGroup>
 
 </Project>

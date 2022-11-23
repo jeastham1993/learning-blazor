@@ -5,8 +5,6 @@ using System.Text.Json;
 
 using GraphQL;
 
-using LearningBlazor.Client.DataPoint;
-
 using GraphQL.Client.Http;
 
 using StrawberryShake;

@@ -1,9 +1,5 @@
 ﻿namespace LearningBlazor.DataPoints;
 
-using GraphQL;
-
-using LearningBlazor.Client.DataPoint;
-
 using StrawberryShake;
 
 public interface IDataPointService
