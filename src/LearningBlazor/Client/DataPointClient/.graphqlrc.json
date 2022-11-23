@@ -5,7 +5,7 @@
     "strawberryShake": {
       "name": "DataPointClient",
       "namespace": "LearningBlazor.Client.DataPoint",
-      "url": "https://6bs7uvi6gfcmplguygvvacq2p4.appsync-api.us-east-1.amazonaws.com/graphql",
+      "url": "https://h7ihye3yk5abhhkz2swaok65s4.appsync-api.us-east-1.amazonaws.com/graphql",
       "dependencyInjection": true,
       "strictSchemaValidation": true,
       "hashAlgorithm": "md5",

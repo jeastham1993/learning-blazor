@@ -5,6 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningBlazor", "src\LearningBlazor\LearningBlazor.csproj", "{977EECC7-D10D-4DF1-AA81-C52E9B1C33D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlBackendInfrastructure", "infrastructure\GraphQlBackendInfrastructure\src\GraphQlBackendInfrastructure\GraphQlBackendInfrastructure.csproj", "{FFA51423-CC98-4D15-8653-DC8E2B741C23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "functions", "functions", "{762D9AD8-ABEE-4F80-958E-14A6AB609F5B}"
+	ProjectSection(SolutionItems) = preProject
+		infrastructure\LambdaHandlers\template.yaml = infrastructure\LambdaHandlers\template.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetProducts", "infrastructure\LambdaHandlers\GetProducts\GetProducts.csproj", "{6FF843E5-613B-4A16-BF52-1BFA1EF6A620}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{14D4476C-7A2C-4677-8A4F-966214BEA6E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +29,17 @@ Global
 		{977EECC7-D10D-4DF1-AA81-C52E9B1C33D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{977EECC7-D10D-4DF1-AA81-C52E9B1C33D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{977EECC7-D10D-4DF1-AA81-C52E9B1C33D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA51423-CC98-4D15-8653-DC8E2B741C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA51423-CC98-4D15-8653-DC8E2B741C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA51423-CC98-4D15-8653-DC8E2B741C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA51423-CC98-4D15-8653-DC8E2B741C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF843E5-613B-4A16-BF52-1BFA1EF6A620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF843E5-613B-4A16-BF52-1BFA1EF6A620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF843E5-613B-4A16-BF52-1BFA1EF6A620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF843E5-613B-4A16-BF52-1BFA1EF6A620}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6FF843E5-613B-4A16-BF52-1BFA1EF6A620} = {762D9AD8-ABEE-4F80-958E-14A6AB609F5B}
+		{FFA51423-CC98-4D15-8653-DC8E2B741C23} = {14D4476C-7A2C-4677-8A4F-966214BEA6E0}
 	EndGlobalSection
 EndGlobal

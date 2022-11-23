@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    MemorySize: 1024
+    Architectures: ["arm64"]
+    Runtime: dotnet6
+    Timeout: 30
+    Tracing: Active
+
+
+Resources:
+  GetProductsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./GetProducts/
+      Handler: GetProducts::GetProducts.Function::FunctionHandler

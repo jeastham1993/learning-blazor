@@ -460,14 +460,16 @@ namespace LearningBlazor.Client.DataPoint
             return _iDFormatter.Format(input);
         }
 
-        private global::System.Object? FormatCreatedAt(global::System.String input)
+        private global::System.Object? FormatCreatedAt(global::System.String? input)
         {
             if (input is null)
             {
-                throw new global::System.ArgumentNullException(nameof(input));
+                return input;
             }
-
-            return _aWSDateTimeFormatter.Format(input);
+            else
+            {
+                return _aWSDateTimeFormatter.Format(input);
+            }
         }
 
         private global::System.Object? FormatValue(global::System.Int32? input)
@@ -523,7 +525,7 @@ namespace LearningBlazor.Client.DataPoint
                 return false;
             }
 
-            return (Name.Equals(other.Name)) && CreatedAt.Equals(other.CreatedAt) && Value == other.Value;
+            return (Name.Equals(other.Name)) && ((CreatedAt is null && other.CreatedAt is null) || CreatedAt != null && CreatedAt.Equals(other.CreatedAt)) && Value == other.Value;
         }
 
         public override global::System.Int32 GetHashCode()
@@ -532,7 +534,11 @@ namespace LearningBlazor.Client.DataPoint
             {
                 int hash = 5;
                 hash ^= 397 * Name.GetHashCode();
-                hash ^= 397 * CreatedAt.GetHashCode();
+                if (CreatedAt != null)
+                {
+                    hash ^= 397 * CreatedAt.GetHashCode();
+                }
+
                 if (Value != null)
                 {
                     hash ^= 397 * Value.GetHashCode();
@@ -544,7 +550,7 @@ namespace LearningBlazor.Client.DataPoint
 
         private global::System.String _value_name = default !;
         private global::System.Boolean _set_name;
-        private global::System.String _value_createdAt = default !;
+        private global::System.String? _value_createdAt;
         private global::System.Boolean _set_createdAt;
         private global::System.Int32? _value_value;
         private global::System.Boolean _set_value;
@@ -559,7 +565,7 @@ namespace LearningBlazor.Client.DataPoint
         }
 
         global::System.Boolean global::LearningBlazor.Client.DataPoint.State.ICreateDataPointInputInfo.IsNameSet => _set_name;
-        public global::System.String CreatedAt
+        public global::System.String? CreatedAt
         {
             get => _value_createdAt;
             set
