@@ -1,0 +1,9 @@
+query listDataPoints {
+  listDataPoints {
+    items {
+      name
+      createdAt
+      value
+    }
+  }
+}

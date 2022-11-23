@@ -1,0 +1,7 @@
+﻿@inherits AddDataPointComponent
+
+<MudTextField @bind-Value="Name" Placeholder="Name" Variant="Variant.Outlined"></MudTextField>
+<MudTextField @bind-Value="Value" Placeholder="Value" Variant="Variant.Outlined"></MudTextField>
+<br/>
+<MudButton Variant="Variant.Filled" @onclick="OnSaveDataPoint" Color="Color.Primary">Submit</MudButton>
+<br/>

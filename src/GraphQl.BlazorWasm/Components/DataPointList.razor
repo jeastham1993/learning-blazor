@@ -1,0 +1,43 @@
+﻿@inherits LayoutComponentBase
+
+<MudTable Items="@DataItems" Hover="true" Striped="true" Filter="new Func<DataPointItem, bool>(FilterFunc1)" Breakpoint="Breakpoint.Sm" Loading="@Loading" LoadingProgressColor="Color.Info">
+    <ToolBarContent>
+            <MudText Typo="Typo.h6">Data Points</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh>Created At</MudTh>
+        <MudTh>Value</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Created At">@context.CreatedAt</MudTd>
+        <MudTd DataLabel="Value">@context.Value</MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+
+@code {
+    [Parameter]
+    public List<DataPointItem> DataItems { get; set; }
+    
+    [Parameter]
+    public bool Loading { get; set; }
+    
+    private string searchString1 = "";
+    
+    private bool FilterFunc1(DataPointItem element) => FilterFunc(element, searchString1);
+
+    private bool FilterFunc(DataPointItem element, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Name.Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        return false;
+    }
+}

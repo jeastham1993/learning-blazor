@@ -1,0 +1,10 @@
+﻿@page "/"
+@inherits IndexComponent
+
+<PageTitle>Data Points</PageTitle>
+
+<h1>Data Points</h1>
+
+<AddDataPoint></AddDataPoint>
+<MudDivider />
+<DataPointList DataItems="@DataPointNames" Loading="@Loading" />
